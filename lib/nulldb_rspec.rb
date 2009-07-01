@@ -70,7 +70,7 @@ module NullDB::RSpec::NullifiedDatabase
   private
 
   def self.included(other)
-    if other.ancestors.include?(Spec::Rails::Example::RailsExampleGroup)
+    if other.ancestors.include?(ActiveSupport::TestCase)
       contextually_nullify_database(other)
     else
       globally_nullify_database
