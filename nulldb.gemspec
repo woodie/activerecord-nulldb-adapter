@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{nulldb}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Avdi Grimm"]
@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
      "init.rb",
      "lib/active_record/connection_adapters/nulldb_adapter.rb",
      "lib/nulldb_rspec.rb",
+     "nulldb.gemspec",
      "spec/nulldb_spec.rb",
      "tasks/database.rake"
   ]
