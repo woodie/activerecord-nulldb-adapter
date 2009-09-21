@@ -12,11 +12,11 @@ Gem::Specification.new do |s|
   s.date = %q{2009-09-21}
   s.extra_rdoc_files = [
     "LICENSE",
-     "README"
+     "README.rdoc"
   ]
   s.files = [
     "LICENSE",
-     "README",
+     "README.rdoc",
      "Rakefile",
      "VERSION",
      "init.rb",

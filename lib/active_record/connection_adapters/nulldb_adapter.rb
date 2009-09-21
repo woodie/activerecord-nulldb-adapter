@@ -52,8 +52,8 @@ class ActiveRecord::ConnectionAdapters::NullDBAdapter <
     end
   end
 
-  # A convenience method for integratinginto RSpec.  See README for example of
-  # use.
+  # A convenience method for integratinginto RSpec.  See README.rdoc for example
+  # of use.
   def self.insinuate_into_spec(config)
     config.before :all do
       ActiveRecord::Base.establish_connection(:adapter => :nulldb)

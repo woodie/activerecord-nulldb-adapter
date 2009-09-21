@@ -8,8 +8,8 @@ Spec::Rake::SpecTask.new('spec') do |t|
 end
 
 Rake::RDocTask.new do |rd|
-  rd.main = "README"
-  rd.rdoc_files.include("README", "LICENSE", "lib/**/*.rb")
+  rd.main = "README.rdoc"
+  rd.rdoc_files.include("README.rdoc", "LICENSE", "lib/**/*.rb")
 end
 
 desc "Publish project home page"
