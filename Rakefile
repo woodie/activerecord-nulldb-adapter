@@ -2,6 +2,9 @@ require 'rake'
 require 'rake/rdoctask'
 require 'spec/rake/spectask'
 
+# active_record connection_adapters abstract connection_specification
+GEM_NAME = 'activerecord-nulldb-adapter'
+
 desc "Run all examples"
 Spec::Rake::SpecTask.new('spec') do |t|
   t.spec_files = FileList['spec/**/*_spec.rb']
@@ -27,14 +30,22 @@ task :tag do
   sh "svn cp #{repos}/trunk #{repos}/tags/nulldb-#{version}"
 end
 
+desc "Build gem"
+task :gem do
+  system 'rake gemspec'
+  system "gem build #{GEM_NAME}.gemspec"
+end
+
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = 'nulldb'
+    gem.name = GEM_NAME
     gem.summary = %Q{NullDB lets you to test your models without ever touching a real database.}
+    gem.email = "josh@technicalpickles.com"
     gem.homepage = 'http://nulldb.rubyforge.org'
+    gem.description = "An ActiveRecord null database adapter for greater speed and isolation in unit tests"
+    gem.rubyforge_project = 'nulldb' 
     gem.authors = ['Avdi Grimm']
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 
 rescue LoadError
