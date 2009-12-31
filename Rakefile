@@ -41,7 +41,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = GEM_NAME
     gem.summary = %Q{NullDB lets you to test your models without ever touching a real database.}
-    gem.email = "josh@technicalpickles.com"
+    gem.email = "avdi@avdi.org"
     gem.homepage = 'http://nulldb.rubyforge.org'
     gem.description = "An ActiveRecord null database adapter for greater speed and isolation in unit tests"
     gem.rubyforge_project = 'nulldb' 

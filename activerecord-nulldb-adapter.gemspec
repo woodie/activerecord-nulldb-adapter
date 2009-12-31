@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors = ["Avdi Grimm"]
   s.date = %q{2009-12-30}
   s.description = %q{An ActiveRecord null database adapter for greater speed and isolation in unit tests}
-  s.email = %q{josh@technicalpickles.com}
+  s.email = %q{avdi@avdi.org}
   s.extra_rdoc_files = [
     "LICENSE",
      "README"
